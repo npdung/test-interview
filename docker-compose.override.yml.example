@@ -1,0 +1,9 @@
+services:
+  php:
+    volumes:
+      - ./:/srv/app
+    environment:
+      XDEBUG_MODE: "${XDEBUG_MODE:-debug}"
+      PHP_IDE_CONFIG: "serverName=_"
+    extra_hosts:
+      - host.docker.internal:host-gateway
